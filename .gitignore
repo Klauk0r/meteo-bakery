@@ -139,3 +139,6 @@ models/*
 
 # playground notebook
 playground.ipynb
+
+# plots folder
+plots/
