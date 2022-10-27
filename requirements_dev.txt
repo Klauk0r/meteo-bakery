@@ -11,4 +11,4 @@ mlflow==1.20.2
 parsenvy==3.0.2
 black==21.9b0
 protobuf==3.20.1
-openpyxl=3.0.10
+openpyxl==3.0.10
