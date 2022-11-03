@@ -139,6 +139,7 @@ models/*
 
 # playground notebook
 playground.ipynb
+playground_darts.ipynb
 
 # plots folder
 plots/
@@ -146,5 +147,5 @@ plots/
 # ds store
 .DS_Store
 
-#libomp
+# darts 
 libomp.rb
