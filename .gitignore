@@ -145,3 +145,6 @@ plots/
 
 # ds store
 .DS_Store
+
+#libomp
+libomp.rb
