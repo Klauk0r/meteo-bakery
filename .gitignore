@@ -140,6 +140,7 @@ models/*
 # playground notebook
 playground.ipynb
 playground_darts.ipynb
+playground_lm.ipynb
 
 # plots folder
 plots/
