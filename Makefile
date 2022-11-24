@@ -4,5 +4,6 @@ SHELL := /bin/bash
 setup:
 	pyenv local 3.9.8
 	python -m venv .venv
+	brew install lightgbm
 	.venv/bin/python -m pip install --upgrade pip
 	.venv/bin/python -m pip install -r requirements_dev.txt
