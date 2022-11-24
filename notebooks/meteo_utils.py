@@ -36,16 +36,31 @@ def get_time_info(df, date_col, parse_to_datetime=False):
     """
     # parse to datetime if necessary
     if parse_to_datetime==True:
-        df[date_col] = pd.to_datetime(df[date_col],utc=True)
+        df[date_col] = pd.to_datetime(df[date_col])
     
-    df['date'] = df[date_col].dt.date
+    #df['date'] = df[date_col].dt.date
     df['year'] = df[date_col].dt.year
     df['month'] = df[date_col].dt.month
-    df['month_sin'] = df.month.apply(lambda x: np.sin(np.array(x) * np.pi /6))
-    df['month_cos'] = df.month.apply(lambda x: np.cos(np.array(x) * np.pi /6))
-    df['week'] = df[date_col].dt.week
+    df['week'] = df[date_col].dt.isocalendar().week
     df['day_of_month'] = df[date_col].dt.day
     df['day_of_week'] = df[date_col].dt.dayofweek
+    
+    return df
+
+###################################################################################################################
+# function for generating sine- and cosine-transformed month
+def transform_month(df, var_name):
+    """Takes in month and generates sine- and cosine-transformed components
+
+    Args:
+        df (pd.DataFrame): A pandas dataframe
+        var_name (str): Name of variable that encodes for the month
+
+    Returns:
+        pd.DataFrame: A pandas dataframe with columns on sine- and cosine-transformed month
+    """
+    df['month_sin'] = df[var_name].apply(lambda x: np.sin(np.array(x) * np.pi /6))
+    df['month_cos'] = df[var_name].apply(lambda x: np.cos(np.array(x) * np.pi /6))
     
     return df
 
