@@ -19,9 +19,9 @@ Below you will find instructions to rebuild the project.
 
 - pyenv with Python: 3.9.8
 
-#### Setup
+### Setup
 
-For installing the virtual environment you can either use the Makefile and run `make setup` or install it manually with the commands below. Note that the lightgbm package is not available as a python package, but instead needs to be installed using brew. However, the package can be important into python files as usual using the `import` statement.
+For installing the virtual environment you can either use the Makefile and run `make setup` or install it manually with the commands below. Note that the lightgbm package is not available as a python package, but instead needs to be installed using brew. However, the package can be imported into python files as usual using the `import` statement.
 
 ```BASH
 make setup
